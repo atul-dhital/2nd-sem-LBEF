@@ -1,0 +1,60 @@
+.service {
+  padding: 100px 0 50px 0;
+  @media only screen and (max-width: 800px) {
+    padding: 50px 0 30px 0;
+  }
+}
+
+.service__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.service__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  max-width: 340px;
+}
+
+.service__image {
+  margin: 0;
+}
+
+.service__image img {
+  width: 80px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.service__text {
+  width: calc(100% - 110px);
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.service__text p {
+  margin: 0;
+}
+
+.service__text strong {
+  color: #50b52d;
+  font-weight: 400;
+  margin: 0;
+}
+
+.service__title {
+  font-family: "Lora", serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #4b4d4f;
+  margin: 0;
+  margin-bottom: 5px;
+}

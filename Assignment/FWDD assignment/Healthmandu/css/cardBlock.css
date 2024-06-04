@@ -1,0 +1,145 @@
+.cardBlock {
+    padding: 92px 0 100px 0;
+    @media only screen and (max-width: 800px) {
+        padding: 50px 0 30px 0;
+    }
+}
+
+.cardBlock__top {
+    display: flex;
+    justify-content: center;
+}
+
+.cardBlock__title {
+    text-align: center;
+    margin-bottom: 85px;
+    font-family: "Lora";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    color: #434343;
+    position: relative;
+    display: inline-block;
+    @media only screen and (max-width: 900px) {
+        width: 100%;
+        margin-bottom: 45px;
+        font-size: 30px;
+    }
+}
+
+.cardBlock__title::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: -30px;
+    left: 50px;
+    right: 50px;
+    background-color: #3bae12;
+    display: inline;
+}
+
+.cardBlock__banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 110px;
+    margin-bottom: 90px;
+    @media only screen and (max-width: 900px) {
+        gap: 60px;
+        margin-bottom: 40px;
+    }
+}
+
+.cardBlock__bannerText {
+    font-family: "Lora";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #4b4d4f;
+    position: relative;
+    margin-bottom: 0;
+    display: block;
+    text-decoration: none;
+}
+
+.cardBlock__bannerText--active {
+    color: #3bae12;
+}
+
+.cardBlock__bannerText--active::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    background-color: #3bae12;
+    display: inline;
+}
+
+.cardBlock__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.cardBlock__card {
+    width: calc(25% - 25px);
+    @media only screen and (max-width: 900px) {
+        width: calc(50% - 25px);
+    }
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+.cardBlock__image {
+    width: 100%;
+    height: 383px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    border: 1px solid #d9d9d9;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+    @media only screen and (max-width: 600px) {
+        height: 250px;
+    }
+}
+
+.cardBlock__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     font-family: "Lora";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #50b52d;
+}
+
+.cardBlock__name {
+     font-family: "Lora";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #434343;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.cardList>.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardList__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 60px;
+    row-gap: 0;
+}

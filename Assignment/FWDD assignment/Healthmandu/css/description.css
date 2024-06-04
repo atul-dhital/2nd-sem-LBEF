@@ -1,0 +1,35 @@
+.decription {
+  margin-bottom: 75px;
+}
+
+.description__wrapper {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  background: #f5f5f5;
+  padding: 44px 25px 22px 25px;
+}
+
+.description__active{
+  color: #50B52D;
+}
+
+.description__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-left: 32px;
+  flex-wrap: wrap;
+  gap: 44px;
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  color: #9c9c9c;
+  margin-bottom: 40px;
+}

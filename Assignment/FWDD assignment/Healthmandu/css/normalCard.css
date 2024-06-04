@@ -1,0 +1,32 @@
+.normalCard__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.normalCard__card {
+  width: 383px;
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  color: #434343;
+  text-align: center;
+
+  display: block;
+}
+
+.normalCard__card {
+  text-decoration: none;
+}
+.normalCard__image {
+  width: 100%;
+  height: 244px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}

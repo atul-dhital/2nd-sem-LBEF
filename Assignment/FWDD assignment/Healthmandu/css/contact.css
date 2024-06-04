@@ -1,0 +1,68 @@
+.contact__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.mainContent__form--large {
+  width: 72%;
+  @media only screen and (max-width: 1200px) {
+    width: 100%;
+  }
+}
+
+.contact__title {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  /* identical to box height, or 160% */
+  width: 100%;
+  color: #3bae12;
+  margin-bottom: 18px;
+}
+
+.contact__text {
+  width: calc(100% - (72% + 25px));
+  @media only screen and (max-width: 1200px) {
+    width: 100%;
+  }
+}
+
+.contact__title--margin {
+  margin-bottom: 27px;
+}
+
+.contact__text {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 24px;
+  /* or 200% */
+  color: #434343;
+}
+
+.contact__text > p {
+  margin-bottom: 35px;
+}
+
+.contact__infoItem {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.contact__infoItem i {
+  font-size: 30px;
+  color: #606060;
+}

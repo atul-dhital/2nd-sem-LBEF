@@ -1,0 +1,117 @@
+.banner {
+  background-image: url("../images/banner.jpg");
+  width: 100%;
+  height: 468px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 64px;
+  margin-bottom: 45px;
+  overflow: hidden;
+  @media only screen and (max-width: 800px) {
+    width: 350px;
+    height: 250px;
+    margin-bottom: 25px;
+    padding: 20px;
+  }
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
+}
+
+.banner__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.banner__wrapper p {
+  margin-bottom: 20px;
+}
+
+.banner__wrapper strong {
+  font-weight: 400;
+  color: #3bae12;
+}
+
+.banner__title {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.banner__title strong {
+  color: #3bae12;
+}
+
+.cardFancy {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 45px;
+  @media only screen and (max-width: 800px) {
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+}
+
+.cardFancy__card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardFancy__imageSecond {
+  width: 263px;
+  height: 263px;
+  overflow: hidden;
+  margin-bottom: 34px;
+  padding: 0;
+  margin: 0;
+}
+
+.cardFancy__imageSecond img {
+  width: 100%;
+  height: 100%;
+}
+
+.cardFancy__card {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #50b52d;
+}
+
+.cardFancy__title {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #434343;
+  margin-bottom: 5px;
+}
+
+.cardFancy__showMore {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.button {
+  display: block;
+}

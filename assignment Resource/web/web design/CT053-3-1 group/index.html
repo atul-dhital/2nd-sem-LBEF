@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>LBEF</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--  Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+    
+  </head>
+  <body>
+    <!-- Add the floating button code within the <body> section of your web page -->
+    <button class="help-button" onclick="toggleHelpMessage()">Need Help?</button>
+    <div id="help-message">For any portal-related issues/queries, contact your TPR.</div>
+  
+  
+    <!-- JavaScript code -->
+    <script src="main.js">
+     
+    </script>
+  
+</body>
+</html>
+
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+    
+    <style>
+        /* Custom CSS for resizing the college logo */
+        .college-logo {
+            max-width: 100px; /* Set the maximum width you want for the logo */
+            max-height: 50px; /* Set the maximum height you want for the logo */
+            margin-right: 10px; /* Add some right margin to separate the logo from the text (adjust as needed) */
+        }
+    </style>
+    
+
+<!-- Top Navbar -->
+<nav class="navbar navbar-expand-lg bg-light navbar-dark fixed-top">
+    <div class="container">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <img src="..//web site/img/logo.png" alt="College Logo" class="college-logo">
+            <h2 class="m-0 ms-2 text-dark"></h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ms-auto p-3 p-lg-0">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active text-dark">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.lbef.org/lord-buddha-education-foundation-about-us/" class="nav-link text-dark">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="student.html" class="nav-link text-dark">Student Team</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Recruiters</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="Facilities.html">Facilities</a>
+                        <a class="dropdown-item" href="feature.html">Procedures & Policies</a>
+                        <a class="dropdown-item" href="calender.html">TPC Calendar</a>
+                        <a class="dropdown-item" href="past.html">Past Recruiters</a>
+                        <a class="dropdown-item" href="https://www.lbef.org/course/">Course Syllabus</a>
+                        <a class="dropdown-item" href="https://www.lbef.org/lord-buddha-education-foundation-about-us/">Discover LBEF</a>
+                        <a class="dropdown-item" href="testimonial.html">FAQ</a>
+                        <a class="dropdown-item" href="https://www.forms.lbef.org/lbef_scholarship.php" download>Scholarship Forms</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.lbef.org/contactus/" class="nav-link text-dark">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Students</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="#" class="dropdown-item" onclick="showLoginForm()">Log in</a>
+                        <a href="#" class="dropdown-item" onclick="showSignUpForm()">Sign Up</a>
+                    </div>
+                </li>
+            </ul>
+            <a href="#" class="btn btn-primary py-3 px-4 d-none d-lg-block" data-toggle="modal" data-target="#classSelectionModal">Join Now <i class="fa fa-arrow-right ms-2"></i></a>
+        </div>
+    </div>
+</nav>
+<!-- End Top Navbar -->
+
+
+<!-- Login Box -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Login Form</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="hideLoginForm()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username"><br><br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"><br><br>
+
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                <p class="mt-3">
+                    <a href="#" onclick="showForgotUsernameForm()">Forgot Username</a> |
+                    <a href="#" onclick="showForgotPasswordForm()">Forgot Password</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sign Up Box -->
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Sign Up Form</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="hideSignUpForm()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName"><br><br>
+
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName"><br><br>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email"><br><br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"><br><br>
+
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+<style>
+    /* Custom CSS for resizing the company logos */
+    .logo-img {
+        max-width: 120px; /* Set the maximum width you want for the logos */
+        max-height: 80px; /* Set the maximum height you want for the logos */
+        margin: 10px; /* Add some margin between the logos (adjust as needed) */
+    }
+
+    /* CSS for the sliding animation */
+    .company-logos {
+        display: flex;
+        overflow: hidden;
+    }
+
+    .company-logos img {
+        animation: slideLeftToRight 10s linear infinite; /* Adjust the animation duration and timing function as needed */
+    }
+
+    @keyframes slideLeftToRight {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%); /* Adjust the slide distance here (e.g., -100%, -200%, etc.) */
+        }
+    }
+</style>
+
+
+  <!-- Carousel Start -->
+<div class="container-fluid p-0 mb-5">
+    <div class="owl-carousel header-carousel position-relative">
+
+    <!-- Carousel Item 1 -->
+<div class="owl-carousel-item position-relative">
+    <img class="img-fluid" src="..//web site/img/pic3.png" alt="">
+    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-sm-10 col-lg-8">
+                    <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Welcome LBEF</h5>
+                    <h1 class="display-3 text-white animated slideInDown">Training and Placement Cell</h1>
+                    <p class="fs-5 text-white mb-4 pb-2">
+                        It is our conviction that the right attitude to learning that emphasizes on key areas of knowledge and the overall enhancement of a student to a complete persona is what takes him closer to the goal.<br>
+                        <strong>ALUMNI</strong><br>
+                        12000+<br>
+                        <strong>HISTORY</strong><br>
+                        25+<br>
+                        <strong>CLASS ROOMS</strong><br>
+                        30+<br>
+                        <strong>STUDENTS</strong><br>
+                        1000+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Carousel Item 2 -->
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="..//web site/img/pic4.png" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-sm-10 col-lg-8">
+                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown">LBEF Tranning And Placement cell</h5>
+                            <h1 class="display-3 text-white animated slideInDown">Our alumni work</h1>
+                            <p class="fs-5 text-white mb-4 pb-2"></p>
+                            <a href="https://www.lbef.org/training-placement-cell/" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+
+                        </div>
+                    </div>
+                    <!-- Add the heading above the company logos -->
+                    <div class="col-12 mt-4">
+                        <h3 class="text-white">Featured Companies</h3>
+                    </div>
+                    <!-- Add the company logos inside this div -->
+                    <div class="company-logos col-12 mt-3">
+                        <img src="img/Nepal p.png" alt="Company Logo 1" class="logo-img">
+                        <img src="img/Army.png" alt="Company Logo 2" class="logo-img">
+                        <img src="img/tel.png" alt="Company Logo 3" class="logo-img">
+                        <img src="img/ncell.png" alt="Company Logo 4" class="logo-img">
+                        <img src="img/f.png" alt="Company Logo 5" class="logo-img">
+                        <img src="img/ve.png" alt="Company Logo 6" class="logo-img">
+                        <img src="img/ja.png" alt="Company Logo 7" class="logo-img">
+                        <img src="img/jan.png" alt="Company Logo 8" class="logo-img">
+                        <!-- Add more logo images here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Carousel End -->
+
+<!-- Class Selection Modal -->
+<div class="modal" id="classSelectionModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Select Your Class</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="hideClassSelection()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Please choose from the available classes:</p>
+                <ul>
+                    <li><a href="#" onclick="showBookingForm('AWS Class')">AWS Class</a></li>
+                    <li><a href="#" onclick="showBookingForm('Live Project of Web')">Live Project of Web</a></li>
+                    <li><a href="#" onclick="showBookingForm('JavaScript Class')">JavaScript Class</a></li>
+                    <!-- Add more class options here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Booking Forms (Hidden) -->
+<div class="modal" id="bookingFormAWS" style="display: none;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Booking Form - AWS Class</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="hideBookingForm()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="submitBookingForm(event, 'AWS Class')">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <!-- Add more form fields as needed -->
+
+                    <button type="submit">Submit Booking</button>
+                </form>
+                <p>Time Table for AWS Class:</p>
+                <!-- Add the time table for AWS Class here -->
+                <p>Monday: 10 AM - 12 PM</p>
+                <p>Wednesday: 2 PM - 4 PM</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="bookingFormLiveProject" style="display: none;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Booking Form - Live Project of Web</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="hideBookingForm()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="submitBookingForm(event, 'Live Project of Web')">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <!-- Add more form fields as needed -->
+
+                    <button type="submit">Submit Booking</button>
+                </form>
+                <p>Time Table for Live Project of Web:</p>
+                <!-- Add the time table for Live Project of Web here -->
+                <p>Tuesday: 1 PM - 3 PM</p>
+                <p>Thursday: 3 PM - 5 PM</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="bookingFormJavaScript" style="display: none;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Booking Form - JavaScript Class</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="hideBookingForm()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="submitBookingForm(event, 'JavaScript Class')">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <!-- Add more form fields as needed -->
+
+                    <button type="submit">Submit Booking</button>
+                </form>
+                <p>Time Table for JavaScript Class:</p>
+                <!-- Add the time table for JavaScript Class here -->
+                <p>Monday: 2 PM - 4 PM</p>
+                <p>Wednesday: 4 PM - 6 PM</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- About Start -->
+<div class="container-xxl py-5 bg-light">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="position-relative h-100">
+                    <img class="img-fluid rounded shadow-lg" src="..//web site/img/about.jpg" alt="About Us Image" style="width: 600px; height: 300px;">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-white p-4 rounded shadow-lg">
+                    <h2 class="section-title text-primary">About Us</h2>
+                    <h1 class="mb-4">Welcome to lbefcampus</h1>
+                    <p class="mb-4">Founded in 1998, the Lord Buddha Education Foundation (LBEF), a Non-Profit, Non-Government Organization, has a well-established tradition of excellence across a broad range of academic disciplines.</p>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="https://www.lbef.org/lord-buddha-education-foundation-about-us/">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+
+
+    <!-- Categories Section Start -->
+<div class="container py-5 category">
+    <div class="text-center">
+        <h6 class="section-title bg-white text-primary px-3">Categories</h6>
+        <h1 class="mb-5">Courses Categories</h1>
+    </div>
+    <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+            <div class="card wow fadeIn" data-wow-delay="0.1s">
+                <a class="position-relative d-block overflow-hidden" href="#">
+                    <img class="card-img-top" src="..//web site/img/zzz.jpg" alt="Computing">
+                    <div class="card-body bg-white text-center">
+                        <h5 class="card-title m-0">Computing</h5>
+                        <small class="text-primary">49 Courses</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card wow fadeIn" data-wow-delay="0.3s">
+                <a class="position-relative d-block overflow-hidden" href="#">
+                    <img class="card-img-top" src="..//web site/img/yyy.jpg" alt="Business Courses">
+                    <div class="card-body bg-white text-center">
+                        <h5 class="card-title m-0">Business Courses</h5>
+                        <small class="text-primary">49 Courses</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card wow fadeIn" data-wow-delay="0.5s">
+                <a class="position-relative d-block overflow-hidden" href="#">
+                    <img class="card-img-top" src="..//web site/img/xxxx.jpg" alt="Video Editing">
+                    <div class="card-body bg-white text-center">
+                        <h5 class="card-title m-0">Video Editing</h5>
+                        <small class="text-primary">49 Courses</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Categories Section End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
+                <h1 class="mb-5">Expert Instructors</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="..//web site/img/prakesh.png.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Er. Prakash Kumar Kejriwal</h5>
+                            <small>Executive Director</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="..//web site/img/san.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Dr. Sandeep Kautish</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="..//web site/img/jasbir-makkar-1.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Officer - Information Technology</h5>
+                            <small>Jasbir S. Makkar
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="..//web site/img/jyotirmoy.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Jyotir Moy Chatterjee</h5>
+                            <small>Assistant Professor (Visiting Faculty)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+<div class="container-xxl py-5 bg-light">
+    <div class="container">
+        <div class="text-center">
+            <h6 class="section-title bg-white text-primary px-3">Testimonials</h6>
+            <h1 class="mb-5">What Our Students Say</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial-item text-center">
+                                <img class="rounded-circle mb-3" src="..//web site/img/IMG_0845.jpeg" style="width: 80px; height: 80px;" alt="Arjun Basnet">
+                                <h5 class="mb-0">Arjun Basnet</h5>
+                                <p>Student</p>
+                                <div class="testimonial-text bg-white rounded p-4">
+                                    <p class="mb-0">"No matter how fantastic or horrible this day has been for you, I love you, always, no matter what.  
+                                        Just wanted you to remember that."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-item text-center">
+                                <img class="rounded-circle mb-3" src="..//web site/img/IMG_0841.jpeg" style="width: 80px; height: 80px;" alt="Krish">
+                                <h5 class="mb-0">Krish</h5>
+                                <p>Student</p>
+                                <div class="testimonial-text bg-white rounded p-4">
+                                    <p class="mb-0">"In your new adventure, don’t be afraid to take chances on yourself. 
+                                        Leave room for unexpected surprises and delights."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-item text-center">
+                                <img class="rounded-circle mb-3" src="..//web site/img/IMG_0847.jpeg" style="width: 80px; height: 80px;" alt="Ayush">
+                                <h5 class="mb-0">Ayush</h5>
+                                <p>Student</p>
+                                <div class="testimonial-text bg-white rounded p-4">
+                                    <p class="mb-0">"Time can be your best friend and your worst enemy depending on whether you use it or waste it."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-item text-center">
+                                <img class="rounded-circle mb-3" src="..//web site/img/5.jpg" style="width: 80px; height: 80px;" alt="Urmila Shrestha">
+                                <h5 class="mb-0">Urmila Shrestha</h5>
+                                <p>Student</p>
+                                <div class="testimonial-text bg-white rounded p-4">
+                                    <p class="mb-0">"Study like there’s no tomorrow because if you keep putting off your studies for tomorrow,
+                                         you’ll probably be too late."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+        
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light blue text-dark footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-dark mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="https://www.lbef.org/lord-buddha-education-foundation-about-us/">About Us</a>
+                    <a class="btn btn-link" href="https://www.lbef.org/contactus/">Contact Us</a>
+                    <a class="btn btn-link" href="https://www.lbef.org/admission-procedure/">Admission Procedure</a>
+                    <a class="btn btn-link" href="https://www.lbef.org/fee-refund-policy/">refund policy</a>
+                    <a class="btn btn-link" href="https://www.lbef.org/our-team/">Our Team</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-dark mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Opp. Maitidevi Temple
+                        Kathmandu, Nepal</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+977 1 4411805 /4424431 /4444356 /4424431</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@lbef.org / study@lbef.edu.np</p>
+                    <div class="d-flex pt-2">
+                        <a class="text-white px-2" href="https://www.facebook.com/lbefcampus/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="text-white px-2" href="https://twitter.com/lbefcampus"><i class="fab fa-twitter"></i></a>
+                        <a class="text-white px-2" href="https://www.linkedin.com/company/lbef"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="text-white px-2" href="https://www.instagram.com/lbefcampus/"><i class="fab fa-instagram"></i></a>
+                        <a class="text-white pl-2" href="https://www.youtube.com/@lbefcampus"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-dark mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <a href="https://www.lbef.org/photogallery/" target="_blank">
+                                <img class="img-fluid bg-light p-1" src="..//web site/img/7.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="https://www.lbef.org/photogallery/" target="_blank">
+                                <img class="img-fluid bg-light p-1" src="../web site/img/2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="https://www.lbef.org/photogallery/" target="_blank">
+                                <img class="img-fluid bg-light p-1" src="..//web site/img/4.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="https://www.lbef.org/photogallery/" target="_blank">
+                                <img class="img-fluid bg-light p-1" src="..//web site/img/6.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="https://www.lbef.org/photogallery/" target="_blank">
+                                <img class="img-fluid bg-light p-1" src="..//web site/img/pic5.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="https://www.lbef.org/photogallery/" target="_blank">
+                                <img class="img-fluid bg-light p-1" src="..//web site/img/5.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!--  Javascript -->
+    <script src="js/main.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
+    
+        
+         // Your web app's Firebase configuration
+         const firebaseConfig = {
+            apiKey: "AIzaSyBO4dk2J_vx0xwugRUyaURUxDxIvbSoYwQ",
+            authDomain: "web-data-f5400.firebaseapp.com",
+            projectId: "web-data-f5400",
+            storageBucket: "web-data-f5400.appspot.com",
+            messagingSenderId: "966245733569",
+            appId: "1:966245733569:web:6fd8b4bcbacfef9e18b040"
+          };
+        
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    
+        // Get a reference to Firestore
+        const firestore = getFirestore(app);
+    
+        
+        
+    </script>
+    
+
+</body>
+
+</html>

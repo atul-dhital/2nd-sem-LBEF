@@ -1,0 +1,31 @@
+.billboard {
+    padding: 100px 0 70px 0;
+}
+
+.billboard__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     font-family: "Lora";
+    font-style: normal;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.billboard__wrapper p {
+    margin-bottom: 45px;
+}
+
+.billboard__wrapper p strong {
+    color: #3BAE12;
+    font-weight: 400;
+}
+
+.billboard__title {
+     font-family: "Lora";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}

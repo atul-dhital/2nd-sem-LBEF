@@ -1,0 +1,302 @@
+.productContent {
+  padding: 0;
+  margin: 0;
+}
+
+.productContent__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.productContent__left {
+  width: 26.89%;
+  @media only screen and (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.mainContent {
+  width: calc(100% - 26.89% - 22px);
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+  }
+}
+
+.productContent__title {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  padding-bottom: 10px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.productContent__title::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9;
+  bottom: 0;
+  left: 0;
+  display: block;
+}
+
+.accordion {
+  margin-bottom: 30px;
+}
+
+.accordion__top {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4b4d4f;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 20px;
+}
+
+.fa-angle-down {
+  font-size: 15px;
+}
+
+.accordion__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.accordion__textLevel {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  color: #4b4d4f;
+  text-decoration: none;
+  display: block;
+}
+
+.accordion__square {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #d9d9d9;
+  border: 0.2px solid #aeadad;
+  border-radius: 2px;
+}
+
+.accordion__top {
+  cursor: pointer;
+}
+
+.accordion__body {
+  display: none;
+}
+
+.is-active > .accordion__body {
+  display: block;
+}
+
+.is-active > .accordion__top > .fa-angle-down {
+  transform: rotate(180deg);
+}
+
+.productContent__cate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4b4d4f;
+  margin-bottom: 20px;
+}
+
+.productContent__image {
+  width: 100%;
+  height: 212px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 52px;
+}
+
+.productContent__image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fancyCard__card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-bottom: 30px;
+}
+
+.fancyCard__image {
+  width: 102px;
+  height: 96px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.fancyCard__image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fancyCard__text {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #50b52d;
+}
+
+.fancyCard__text p {
+  margin-bottom: 20px;
+}
+
+.fancyCard__title {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #434343;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 11px;
+}
+
+.mainContent__text {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #434343;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
+}
+
+.mainContent__arrow {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.mainContent__share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #434343;
+}
+
+.mainContent__share p {
+  margin: 0;
+  padding: 0;
+}
+
+.mainContent__share .fa-solid {
+  font-size: 14px;
+  color: #3bae12;
+}
+
+.mainContent__sharePost {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #3bae12;
+}
+
+.mainContent__sharePost p {
+  margin: 0;
+  padding: 0;
+}
+
+.span__comment {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  color: #000000;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.mainContent__form {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 22px;
+}
+
+.mainContent__input {
+  width: 100%;
+  max-width: 344px;
+  height: 50px;
+  border: none;
+  background-color: #ebeaea;
+  text-align: center;
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+  color: #666666;
+  margin-right: 15px;
+}
+
+.mainContent__input--large {
+  max-width: 463px;
+}
+
+.mainContent__input--text {
+  max-width: 100%;
+  height: 230px;
+}
+
+.button--form {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  padding: 9px 22px;
+  border-radius: 0;
+  color: #fdfffc;
+}

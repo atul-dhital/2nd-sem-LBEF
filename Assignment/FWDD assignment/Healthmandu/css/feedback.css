@@ -1,0 +1,108 @@
+.feedback {
+  padding: 80px 0 70px 0;
+  background-image: url("./../images/bc1.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media only screen and (max-width: 700px) {
+    padding: 40px 0;
+  }
+}
+
+.feedback__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback .cardBlock__title {
+  text-align: center;
+}
+
+.feedback__quote {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 300px;
+  line-height: 1;
+  color: #d9d9d9;
+  @media only screen and (max-width: 1000px) {
+    font-size: 100px;
+  }
+}
+
+.feedback__text {
+  position: relative;
+}
+
+.feedback__text {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+
+  color: #434343;
+  @media only screen and (max-width: 1000px) {
+    font-size: 20;
+  }
+}
+
+.feedback__paragraph {
+  width: 100%;
+  max-width: 600px;
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #434343;
+  margin-bottom: 64px;
+  @media only screen and (max-width: 1000px) {
+    margin-bottom: 40px;
+  }
+}
+
+.feedback__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.feedback__rating {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #4b4d4f;
+  display: flex;
+  flex-direction: column;
+}
+
+.fa-star {
+  color: #3bae12;
+}
+
+.feedback__image {
+  height: 81px;
+  width: 81px;
+  @media only screen and (max-width: 800px) {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.feedback__profile {
+   font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+}

@@ -1,0 +1,68 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.primary__nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:aqua;
+}
+.header__wrapper >ul{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    list-style: none !important;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+
+.header__wrapper >ul>a:hover{
+color: brown;
+}
+.hero{
+    background-color: brown;
+    padding-bottom: 40px;
+    height: 30vh;
+}
+.hero__wrappper > .hero__content{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+
+.card__wrapper{
+    display: flex;
+
+    width: 100%;
+    justify-content: space-between;
+  
+    height: 100vh;
+}
+.content__bos-alt{
+    background-color: aqua !important;
+   width: 50%;
+
+}
+.content__bos{
+background-color: blue;
+width: 50%;
+
+}
+.content__bos{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer{
+    width: 100%;
+    background-color: brown;
+    height: 40px;
+}

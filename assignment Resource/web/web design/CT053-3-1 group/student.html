@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!-- Google Web Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+   <!-- Icon Font Stylesheet -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+   <!-- Libraries Stylesheet -->
+   <link href="lib/animate/animate.min.css" rel="stylesheet">
+   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+   <!-- Customized Bootstrap Stylesheet -->
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+
+   <!--  Stylesheet -->
+   <link href="css/style.css" rel="stylesheet">
+   
+  <title>Student Team - TPC</title>
+  
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    #searchInput {
+      padding: 6px;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #d0ecf6;
+    }
+
+    th {
+      background-color: #91d4f5;
+    }
+
+    tr:hover {
+      background-color: #b2d9f1;
+    }
+  </style>
+</head>
+<body>
+    
+    <!-- Top Navbar -->
+<nav class="navbar navbar-expand-lg bg-light navbar-dark fixed-top">
+    <div class="container">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <img src="..//web site/img/logo.png" alt="College Logo" class="college-logo">
+            <h2 class="m-0 ms-2 text-dark"></h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ms-auto p-3 p-lg-0">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active text-dark">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.lbef.org/lord-buddha-education-foundation-about-us/" class="nav-link text-dark">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="student.html" class="nav-link text-dark">Student Team</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Recruiters</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="Facilities.html">Facilities</a>
+                        <a class="dropdown-item" href="feature.html">Procedures & Policies</a>
+                        <a class="dropdown-item" href="calender.html">TPC Calendar</a>
+                        <a class="dropdown-item" href="past.html">Past Recruiters</a>
+                        <a class="dropdown-item" href="https://www.lbef.org/course/">Course Syllabus</a>
+                        <a class="dropdown-item" href="https://www.lbef.org/lord-buddha-education-foundation-about-us/">Discover LBEF</a>
+                        <a class="dropdown-item" href="testimonial.html">FAQ</a>
+                        <a class="dropdown-item" href="https://www.forms.lbef.org/lbef_scholarship.php" download>Scholarship Forms</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.lbef.org/contactus/" class="nav-link text-dark">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Students</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="#" class="dropdown-item" onclick="showLoginForm()">Log in</a>
+                        <a href="#" class="dropdown-item" onclick="showSignUpForm()">Sign Up</a>
+                    </div>
+                </li>
+            </ul>
+            <a href="#" class="btn btn-primary py-3 px-4 d-none d-lg-block" data-toggle="modal" data-target="#classSelectionModal">Join Now <i class="fa fa-arrow-right ms-2"></i></a>
+        </div>
+    </div>
+</nav>
+<!-- End Top Navbar -->
+<!-- Login Box -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Login Form</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="hideLoginForm()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username"><br><br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"><br><br>
+
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                <p class="mt-3">
+                    <a href="#" onclick="showForgotUsernameForm()">Forgot Username</a> |
+                    <a href="#" onclick="showForgotPasswordForm()">Forgot Password</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sign Up Box -->
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Sign Up Form</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="hideSignUpForm()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName"><br><br>
+
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName"><br><br>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email"><br><br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"><br><br>
+
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Class Selection Modal -->
+<div class="modal" id="classSelectionModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Select Your Class</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="hideClassSelection()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Please choose from the available classes:</p>
+                <ul>
+                    <li><a href="#" onclick="showBookingForm('AWS Class')">AWS Class</a></li>
+                    <li><a href="#" onclick="showBookingForm('Live Project of Web')">Live Project of Web</a></li>
+                    <li><a href="#" onclick="showBookingForm('JavaScript Class')">JavaScript Class</a></li>
+                    <!-- Add more class options here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Booking Forms (Hidden) -->
+<div class="modal" id="bookingFormAWS" style="display: none;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Booking Form - AWS Class</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="hideBookingForm()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="submitBookingForm(event, 'AWS Class')">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <!-- Add more form fields as needed -->
+
+                    <button type="submit">Submit Booking</button>
+                </form>
+                <p>Time Table for AWS Class:</p>
+                <!-- Add the time table for AWS Class here -->
+                <p>Monday: 10 AM - 12 PM</p>
+                <p>Wednesday: 2 PM - 4 PM</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="bookingFormLiveProject" style="display: none;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Booking Form - Live Project of Web</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="hideBookingForm()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="submitBookingForm(event, 'Live Project of Web')">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <!-- Add more form fields as needed -->
+
+                    <button type="submit">Submit Booking</button>
+                </form>
+                <p>Time Table for Live Project of Web:</p>
+                <!-- Add the time table for Live Project of Web here -->
+                <p>Tuesday: 1 PM - 3 PM</p>
+                <p>Thursday: 3 PM - 5 PM</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="bookingFormJavaScript" style="display: none;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Booking Form - JavaScript Class</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="hideBookingForm()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="submitBookingForm(event, 'JavaScript Class')">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <!-- Add more form fields as needed -->
+
+                    <button type="submit">Submit Booking</button>
+                </form>
+                <p>Time Table for JavaScript Class:</p>
+                <!-- Add the time table for JavaScript Class here -->
+                <p>Monday: 2 PM - 4 PM</p>
+                <p>Wednesday: 4 PM - 6 PM</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="bishal">
+  <h2>Student Team - TPC</h2>
+
+  <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for student name...">
+
+  <table id="studentTable">
+    <tr>
+      <th>Student Name</th>
+      <th>Designation</th>
+      <th>Branch</th>
+      <th>Course</th>
+      <th>Year</th>
+      <th>Email</th>
+      <th>Mobile</th>
+    </tr>
+    <tr>
+      <td>Ayush Singh</td>
+      <td>Joint Head, Training and Placement Cell</td>
+      <td>Mathematical Sciences</td>
+      <td>IDD</td>
+      <td>5</td>
+      <td>ayush.singh.mat19@itbhu.ac.in</td>
+      <td>6207036096</td>
+    </tr>
+    <tr>
+      <td>Bishal lamichhane</td>
+      <td>Training and Placement Cell</td>
+      <td>Sciences</td>
+      <td>IDD</td>
+      <td>5</td>
+      <td>bishal.lamichhane@itbhu.ac.in</td>
+      <td>6207036097</td>
+    </tr>
+    <tr>
+      <td>Anu lamichhane</td>
+      <td>Training and Placement Cell</td>
+      <td>Sciences</td>
+      <td>IDD</td>
+      <td>5</td>
+      <td>anu.lamichhane@itbhu.ac.in</td>
+      <td>6207036098</td>
+    </tr>
+    
+    <!-- Add the remaining 49 entries here -->
+  </table>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light blue text-dark footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container py-5">
+          <div class="row g-5">
+              <div class="col-lg-3 col-md-6">
+                  <h4 class="text-dark mb-3">Quick Link</h4>
+                  <a class="btn btn-link" href="https://www.lbef.org/lord-buddha-education-foundation-about-us/">About Us</a>
+                  <a class="btn btn-link" href="https://www.lbef.org/contactus/">Contact Us</a>
+                  <a class="btn btn-link" href="https://www.lbef.org/admission-procedure/">Admission Procedure</a>
+                  <a class="btn btn-link" href="https://www.lbef.org/fee-refund-policy/">refund policy</a>
+                  <a class="btn btn-link" href="https://www.lbef.org/our-team/">Our Team</a>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <h4 class="text-dark mb-3">Contact</h4>
+                  <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Opp. Maitidevi Temple
+                      Kathmandu, Nepal</p>
+                  <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+977 1 4411805 /4424431 /4444356 /4424431</p>
+                  <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@lbef.org / study@lbef.edu.np</p>
+                  <div class="d-flex pt-2">
+                      <a class="text-white px-2" href="https://www.facebook.com/lbefcampus/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                      <a class="text-white px-2" href="https://twitter.com/lbefcampus"><i class="fab fa-twitter"></i></a>
+                      <a class="text-white px-2" href="https://www.linkedin.com/company/lbef"><i class="fab fa-linkedin-in"></i></a>
+                      <a class="text-white px-2" href="https://www.instagram.com/lbefcampus/"><i class="fab fa-instagram"></i></a>
+                      <a class="text-white pl-2" href="https://www.youtube.com/@lbefcampus"><i class="fab fa-youtube"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <h4 class="text-dark mb-3">Gallery</h4>
+                  <div class="row g-2 pt-2">
+                      <div class="col-4">
+                          <a href="https://www.lbef.org/photogallery/" target="_blank">
+                              <img class="img-fluid bg-light p-1" src="..//web site/img/7.jpg" alt="">
+                          </a>
+                      </div>
+                      <div class="col-4">
+                          <a href="https://www.lbef.org/photogallery/" target="_blank">
+                              <img class="img-fluid bg-light p-1" src="../web site/img/2.jpg" alt="">
+                          </a>
+                      </div>
+                      <div class="col-4">
+                          <a href="https://www.lbef.org/photogallery/" target="_blank">
+                              <img class="img-fluid bg-light p-1" src="..//web site/img/4.jpg" alt="">
+                          </a>
+                      </div>
+                      <div class="col-4">
+                          <a href="https://www.lbef.org/photogallery/" target="_blank">
+                              <img class="img-fluid bg-light p-1" src="..//web site/img/6.jpg" alt="">
+                          </a>
+                      </div>
+                      <div class="col-4">
+                          <a href="https://www.lbef.org/photogallery/" target="_blank">
+                              <img class="img-fluid bg-light p-1" src="..//web site/img/pic5.png" alt="">
+                          </a>
+                      </div>
+                      <div class="col-4">
+                          <a href="https://www.lbef.org/photogallery/" target="_blank">
+                              <img class="img-fluid bg-light p-1" src="..//web site/img/5.jpg" alt="">
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              
+          </div>
+      </div>
+      <div class="container">
+          <div class="copyright">
+              <div class="row">
+                  <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                      &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Footer End -->
+
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+  <script>
+
+    function searchTable() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("searchInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("studentTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those that don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    
+  </script>
+  <script src="..//web site/js/main.js"></script>
+</body>
+</html>
