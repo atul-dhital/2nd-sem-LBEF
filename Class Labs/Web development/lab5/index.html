@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+            padding: 10px;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        header .heading {
+            margin: 0;
+        }
+
+        /* Main content styling */
+        main {
+            padding: 20px;
+        }
+
+        #content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #content > div {
+            flex: 1 1 25%;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+.filename {
+    display: grid;
+    grid-template-columns: 1fr
+}
+        .filename h2 {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .maincontent {
+            margin-top: 20px;
+        }
+
+        .maincontent h3 {
+            margin-bottom: 10px;
+        }
+
+        .maincontent img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin-top: 10px;
+        }
+
+        form input[type="text"],
+        form input[type="submit"] {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        form input[type="text"] {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        /* Content section styling */
+        .con {
+            margin-top: 20px;
+        }
+
+        .con1 {
+            margin-bottom: 10px;
+        }
+
+        .conp {
+            margin-top: 10px;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer .heading {
+            margin: 0;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            #content > div {
+                flex: 1 1 50%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #content > div {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="heading">header</h1>
+    </header>
+    <main id="main">
+        <section id="content">
+            <div class="filename">
+                <h2>html</h2>
+                <h2>css</h2>
+                <h2>javascript</h2>
+            </div>
+            <div class="maincontent">
+                <h3>title</h3>
+                <img src="#" alt="data image">
+                <form action="#" method="#">
+                    <input type="text" name="name" placeholder="name">
+                    <input type="text" name="email" placeholder="email">
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+            <div class="con">
+                <h1 class="con1">content1</h1>
+                <p class="conp">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias repudiandae assumenda. Alias
+                    repellat rem assumenda veniam placeat ipsam voluptatibus.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <h1 class="heading">footer</h1>
+    </footer>
+</body>
+
+</html>

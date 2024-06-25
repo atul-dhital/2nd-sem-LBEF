@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --color: #fb705f;
+    }
+
+    body {
+      height: 100vh;
+      padding: 10px;
+      display: grid;
+      place-items: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    .color-text {
+      color: var(--color);
+    }
+
+    button {
+      width: 200px;
+      padding: 20px;
+      border: 0;
+      color: white;
+      background-color: var(--color);
+    }
+
+    section {
+      width: 100%;
+      position: relative;
+      flex-wrap: wrap;
+      display: flex;
+      gap: 1em;
+      z-index: 999;
+    }
+
+    .box {
+      height: 400px;
+      width: 600px;
+      background-color: #e2e2e2;
+      position: absolute;
+      right: -10%;
+      top: -50px;
+      z-index: 1;
+    }
+
+    .card {
+      z-index: 999;
+      min-width: 240px;
+      flex: 1;
+      height: 300px;
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .card:nth-child(1) {
+      min-width: 300px;
+      height: auto;
+    }
+
+    .card:nth-child(2) {
+      background-image: url(https://cdn.vectorstock.com/i/preview-1x/13/34/cartoon-apocalyptic-city-landscape-with-destroyed-vector-38931334.jpg);
+    }
+
+    .card:nth-child(3) {
+      background-image: url(https://img.freepik.com/free-vector/city-destroy-war-zone-abandoned-buildings-bridge-with-smoke-cataclysm-destruction-natural-disaster-post-apocalyptic-world-ruins-with-broken-road-street-cartoon-illustration_107791-3826.jpg);
+    }
+
+    .card:nth-child(4) {
+      background-image: url(https://img.freepik.com/free-vector/nuclear-bomb-explosion-ruined-city-vector_1441-3840.jpg);
+    }
+
+    .card .text {
+      position: absolute;
+      bottom: 5px;
+      color: white;
+      left: 10px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      section {
+        height: 100%;
+      }
+
+      button {
+        padding: 10px;
+      }
+
+      .box {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="card">
+      <h1>Top <span class="color-text">Destinations</span> In The World</h1>
+      <p>lorem24</p>
+      <button>Discover More</button>
+    </div>
+    <div class="card">
+      <h2 class="text">Cuba City</h2>
+    </div>
+    <div class="card">
+      <h2 class="text">Paris</h2>
+    </div>
+    <div class="card">
+      <h2 class="text">Japan</h2>
+    </div>
+    <div class="box"></div>
+  </section>
+</body>
+
+</html>
